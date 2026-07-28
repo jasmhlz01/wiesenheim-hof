@@ -1,0 +1,1670 @@
+/* =========================================================
+   WIESENHEIM HOF – STYLE.CSS
+========================================================= */
+
+:root{
+  --green:#687763;
+  --green-dark:#52604e;
+  --cream:#f6f3ed;
+  --sand:#e8e0d4;
+  --white:#ffffff;
+  --text:#41413f;
+  --muted:#6f716d;
+  --line:#d9ddd6;
+  --shadow:0 18px 55px rgba(34,42,33,.12);
+  --radius:22px;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:"Inter",sans-serif;
+  color:var(--text);
+  background:var(--cream);
+  line-height:1.75;
+  overflow-x:hidden;
+}
+
+img{
+  display:block;
+  max-width:100%;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+button,
+input,
+textarea{
+  font:inherit;
+}
+
+button{
+  cursor:pointer;
+}
+
+.section{
+  scroll-margin-top:110px;
+}
+
+/* =========================================================
+   HEADER & NAVIGATION
+========================================================= */
+
+.site-header{
+  position:fixed;
+  inset:0 0 auto 0;
+  z-index:1000;
+  padding:18px 0;
+}
+
+.navbar{
+  width:min(1460px,94%);
+  margin:auto;
+  min-height:72px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:24px;
+  padding:14px 28px;
+  background:rgba(255,255,255,.72);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+  border:1px solid rgba(255,255,255,.65);
+  border-radius:50px;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.menu,
+.nav-right,
+.languages{
+  display:flex;
+  align-items:center;
+}
+
+.menu{
+  gap:28px;
+}
+
+.menu a,
+.languages button{
+  font-size:13px;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  color:#444;
+  transition:.2s ease;
+}
+
+.menu a:hover,
+.languages button:hover,
+.languages button.active{
+  color:var(--green-dark);
+}
+
+.nav-right{
+  gap:24px;
+}
+
+.weather{
+    display:flex;
+    align-items:center;
+    gap:3px;
+    margin:0;
+    padding:0;
+    width:auto;
+    min-width:unset;
+    white-space:nowrap;
+}
+
+.languages{
+  gap:8px;
+}
+
+.languages button{
+  background:none;
+  border:0;
+  padding:5px;
+}
+
+.menu-toggle{
+  display:none;
+  width:42px;
+  height:42px;
+  border:0;
+  border-radius:50%;
+  background:rgba(255,255,255,.7);
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  gap:4px;
+}
+
+.menu-toggle span{
+  width:18px;
+  height:2px;
+  background:#444;
+  display:block;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+  position:relative;
+  min-height:100vh;
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+  background:#7b8477;
+}
+
+.hero-media,
+.hero-media img,
+.hero-media video{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  
+  #heroVideo{
+    filter:
+        blur(3px)
+        brightness(0.65)
+        saturate(1.05);
+    transform:scale(1.08);
+}
+}
+
+.hero-media video{
+  display:none;
+}
+
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(rgba(20,25,20,.18),rgba(20,25,20,.38));
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  text-align:center;
+  color:#fff;
+  padding:130px 25px 80px;
+  width:min(900px,92%);
+}
+
+.hero-logo{
+  width:min(520px,80vw);
+  margin:0 auto 26px;
+}
+
+.hero-logo img{
+  width:100%;
+  max-height:190px;
+  object-fit:contain;
+  filter:drop-shadow(0 3px 8px rgba(0,0,0,.2));
+}
+
+.hero h1{
+  font-family:"Cormorant Garamond",serif;
+  font-size:clamp(58px,8vw,96px);
+  font-weight:500;
+  line-height:1;
+  margin-bottom:14px;
+}
+
+.hero p{
+  font-size:clamp(17px,2vw,23px);
+  letter-spacing:.7px;
+  margin-bottom:38px;
+}
+
+.button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:54px;
+  padding:14px 34px;
+  border-radius:40px;
+  background:var(--green);
+  color:#fff;
+  border:1px solid var(--green);
+  box-shadow:var(--shadow);
+  transition:.25s ease;
+}
+
+.button:hover{
+  transform:translateY(-2px);
+  background:var(--green-dark);
+  border-color:var(--green-dark);
+}
+
+.button-light{
+  background:#fff;
+  color:#3f463c;
+  border-color:rgba(255,255,255,.8);
+}
+
+.button-light:hover{
+  background:var(--green);
+  color:#fff;
+}
+
+.scroll-note{
+  position:absolute;
+  z-index:2;
+  bottom:26px;
+  left:50%;
+  transform:translateX(-50%);
+  color:#fff;
+  font-size:11px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+/* =========================================================
+   GEMEINSAME ABSCHNITTE
+========================================================= */
+
+.intro,
+.farm,
+.apartments,
+.gallery-section,
+.arrival,
+.contact{
+  padding:130px 7%;
+}
+.apartments{
+    padding-bottom:60px;
+}
+
+.gallery-section{
+    padding-top:60px;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:78px;
+}
+
+.section-title span{
+  display:block;
+  text-transform:uppercase;
+  letter-spacing:3px;
+  font-size:12px;
+  color:var(--green);
+  margin-bottom:8px;
+}
+
+.section-title h2{
+  font-family:"Cormorant Garamond",serif;
+  font-size:clamp(44px,5vw,62px);
+  line-height:1.1;
+  font-weight:500;
+}
+
+/* =========================================================
+   WILLKOMMEN
+========================================================= */
+
+.intro{
+  background:var(--cream);
+  text-align:center;
+}
+
+.intro-inner{
+  max-width:980px;
+  margin:auto;
+}
+
+.intro h2{
+  font-family:"Cormorant Garamond",serif;
+  font-size:clamp(46px,6vw,68px);
+  font-weight:500;
+  color:var(--green-dark);
+  margin-bottom:34px;
+}
+
+.intro p{
+  font-size:clamp(17px,2vw,20px);
+  color:#575b55;
+}
+
+/* =========================================================
+   HOF
+========================================================= */
+
+.farm{
+  background:#fff;
+}
+
+.farm-grid{
+  display:grid;
+  grid-template-columns:1.05fr 1fr;
+  gap:80px;
+  align-items:center;
+  max-width:1350px;
+  margin:auto;
+}
+
+.farm-text p{
+  font-size:17px;
+  color:#575b55;
+  margin-bottom:22px;
+}
+
+.farm-images{
+  display:grid;
+  gap:18px;
+}
+
+.farm-images>img,
+.farm-small img{
+  width:100%;
+  object-fit:cover;
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+}
+
+.farm-images>img{
+  height:440px;
+}
+
+.farm-small{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+}
+
+.farm-small img{
+  height:210px;
+}
+
+.highlights{
+  max-width:1100px;
+  margin:75px auto 0;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+
+.highlight{
+  text-align:center;
+  padding:24px 14px;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  color:#52574f;
+}
+
+/* =========================================================
+   FERIENWOHNUNGEN
+========================================================= */
+
+.apartments{
+  background:var(--cream);
+}
+
+.apartment{
+  max-width:1350px;
+  margin:0 auto 55px;
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:78px;
+  align-items:center;
+}
+
+.apartment + .apartment{
+  margin-top:150px;
+}
+
+.apartment-image img{
+  width:100%;
+  height:620px;
+  object-fit:cover;
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  cursor:pointer;
+}
+
+.apartment-content h3{
+  font-family:"Cormorant Garamond",serif;
+  font-size:56px;
+  color:var(--green-dark);
+  line-height:1.1;
+  font-weight:500;
+  margin-bottom:8px;
+}
+
+.apartment-info{
+  color:var(--muted);
+  margin-bottom:24px;
+}
+
+.apartment-copy{
+  font-size:17px;
+  color:#575b55;
+  margin-bottom:34px;
+}
+
+.features{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:0 28px;
+  margin-bottom:34px;
+}
+
+.features div{
+  padding:11px 0;
+  border-bottom:1px solid var(--line);
+  font-size:14px;
+}
+
+.apartment-gallery{
+  max-width:1350px;
+  margin:0 auto 135px;
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:14px;
+}
+
+.apartment-gallery img{
+  width:100%;
+  height:165px;
+  object-fit:cover;
+  border-radius:14px;
+  cursor:pointer;
+  transition:.25s ease;
+}
+
+.apartment-gallery img:hover,
+.gallery-grid img:hover{
+  transform:scale(1.02);
+}
+
+/* ===================================
+   GALERIE
+=================================== */
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    grid-template-rows:repeat(3,220px);
+    gap:18px;
+}
+
+.gallery-grid img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:18px;
+    cursor:pointer;
+    transition:.35s;
+}
+
+.gallery-grid img:hover{
+    transform:scale(1.03);
+}
+
+/* große Bilder */
+
+.gallery-grid img:nth-child(1){
+    grid-column:1;
+    grid-row:1 / span 2;
+}
+
+.gallery-grid img:nth-child(2){
+    grid-column:1;
+    grid-row:3;
+}
+
+/* Mobile */
+
+@media(max-width:900px){
+
+    .gallery-grid{
+        grid-template-columns:1fr 1fr;
+        grid-template-rows:auto;
+    }
+
+    .gallery-grid img{
+        grid-column:auto !important;
+        grid-row:auto !important;
+        height:230px;
+    }
+
+}
+
+/* =========================================================
+   ANFAHRT
+========================================================= */
+
+.arrival{
+  background:var(--sand);
+}
+
+.arrival-grid{
+  max-width:1250px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:70px;
+  align-items:center;
+}
+
+.arrival-text h3{
+  font-family:"Cormorant Garamond",serif;
+  font-size:44px;
+  color:var(--green-dark);
+  font-weight:500;
+  margin-bottom:20px;
+}
+
+.arrival-text p{
+  margin-bottom:20px;
+  color:#555;
+}
+
+.route-card{
+  background:#fff;
+  border-radius:var(--radius);
+  padding:34px;
+  box-shadow:var(--shadow);
+}
+
+.route-line{
+  display:grid;
+  grid-template-columns:48px 1fr;
+  gap:16px;
+  align-items:center;
+  padding:14px 0;
+  border-bottom:1px solid #eceae5;
+}
+
+.route-line:last-child{
+  border-bottom:0;
+}
+
+.route-dot{
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:var(--green);
+  color:#fff;
+  font-weight:600;
+}
+
+.route-line strong{
+  display:block;
+}
+
+.route-line span{
+  font-size:13px;
+  color:var(--muted);
+}
+
+/* =========================================================
+   KONTAKT
+========================================================= */
+
+.contact{
+  background:#fff;
+}
+
+.contact-grid{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:.85fr 1.15fr;
+  gap:80px;
+}
+
+.contact-data h3{
+  font-family:"Cormorant Garamond",serif;
+  font-size:44px;
+  color:var(--green-dark);
+  font-weight:500;
+  margin-bottom:20px;
+}
+
+.contact-data p{
+  margin-bottom:16px;
+  color:#575b55;
+}
+
+.contact-data a{
+  color:var(--green-dark);
+  text-decoration:underline;
+}
+
+.contact-form{
+  display:grid;
+  gap:16px;
+}
+
+.contact-form label{
+  display:grid;
+  gap:7px;
+  font-size:14px;
+  color:#555;
+}
+
+.contact-form input,
+.contact-form textarea{
+  width:100%;
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:15px 17px;
+  background:#fbfaf8;
+}
+
+.contact-form textarea{
+  min-height:160px;
+  resize:vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+  outline:none;
+  border-color:var(--green);
+  box-shadow:0 0 0 3px rgba(104,119,99,.12);
+}
+
+.contact-form button{
+  justify-self:start;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer{
+  padding:62px 20px;
+  background:var(--green-dark);
+  color:#fff;
+  text-align:center;
+}
+
+.site-footer h3{
+  font-family:"Cormorant Garamond",serif;
+  font-size:40px;
+  font-weight:500;
+}
+
+.site-footer p{
+  opacity:.9;
+  margin-top:6px;
+}
+.footer-cow{
+    width:90px;
+    height:auto;
+    display:block;
+    margin:0 auto 22px;
+    opacity:.95;
+    transition:.3s ease;
+}
+.footer-cow:hover{
+    transform:translateY(-3px);
+}
+
+.legal-links{
+  margin-top:28px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:8px;
+  font-size:11px;
+  opacity:.82;
+}
+
+.legal-links a,
+.legal-links button{
+  padding:2px 4px;
+  border:0;
+  background:transparent;
+  color:inherit;
+  font:inherit;
+  cursor:pointer;
+}
+
+.legal-links a:hover,
+.legal-links button:hover{
+  text-decoration:underline;
+}
+
+/* =========================================================
+   LIGHTBOX
+========================================================= */
+
+.lightbox{
+  position:fixed;
+  inset:0;
+  display:none;
+  place-items:center;
+  background:rgba(10,12,10,.92);
+  z-index:5000;
+  padding:40px;
+}
+
+.lightbox.open{
+  display:grid;
+}
+
+.lightbox img{
+  max-width:92vw;
+  max-height:86vh;
+  object-fit:contain;
+}
+
+.lightbox-close{
+  position:absolute;
+  top:22px;
+  right:26px;
+  border:0;
+  background:transparent;
+  color:#fff;
+  font-size:34px;
+}
+
+/* =========================================================
+   COOKIE-BANNER
+========================================================= */
+
+.cookie-banner{
+  position:fixed;
+  z-index:6500;
+  left:50%;
+  bottom:22px;
+  transform:translateX(-50%);
+  width:min(980px,calc(100% - 32px));
+  display:none;
+  grid-template-columns:1fr auto;
+  align-items:center;
+  gap:30px;
+  padding:24px 26px;
+  background:#fff;
+  color:var(--text);
+  border:1px solid #e1e3df;
+  border-radius:20px;
+  box-shadow:0 20px 70px rgba(0,0,0,.22);
+}
+
+.cookie-banner.show{
+  display:grid;
+}
+
+.cookie-text strong{
+  display:block;
+  margin-bottom:6px;
+  font-size:16px;
+}
+
+.cookie-text p{
+  margin:0;
+  font-size:13px;
+  line-height:1.55;
+  color:#626660;
+}
+
+.cookie-text a{
+  display:inline-block;
+  margin-top:8px;
+  color:var(--green-dark);
+  font-size:12px;
+  text-decoration:underline;
+}
+
+.cookie-actions{
+  display:flex;
+  gap:10px;
+}
+
+.cookie-actions button{
+  min-height:46px;
+  padding:10px 18px;
+  border-radius:30px;
+  white-space:nowrap;
+}
+
+.cookie-secondary{
+  border:1px solid var(--green);
+  background:#fff;
+  color:var(--green-dark);
+}
+
+.cookie-primary{
+  border:1px solid var(--green);
+  background:var(--green);
+  color:#fff;
+}
+
+.cookie-secondary:hover{
+  background:var(--cream);
+}
+
+.cookie-primary:hover{
+  background:var(--green-dark);
+}
+
+/* =========================================================
+   RESPONSIVE – TABLET
+========================================================= */
+
+@media (max-width:1050px){
+
+  .menu{
+    display:none;
+    position:absolute;
+    top:86px;
+    left:3%;
+    right:3%;
+    padding:22px;
+    background:rgba(255,255,255,.96);
+    border-radius:24px;
+    box-shadow:var(--shadow);
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .menu.open{
+    display:flex;
+  }
+
+  .menu-toggle{
+    display:flex;
+  }
+
+  .navbar{
+    border-radius:28px;
+  }
+
+  .farm-grid,
+  .apartment,
+  .arrival-grid,
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .apartment-image img{
+    height:520px;
+  }
+
+  .highlights{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .gallery-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+/* =========================================================
+   RESPONSIVE – HANDY
+========================================================= */
+
+@media (max-width:700px){
+
+  .site-header{
+    padding:10px 0;
+  }
+
+  .navbar{
+    width:96%;
+    padding:12px 16px;
+  }
+
+  .weather{
+    display:none;
+  }
+
+  .hero{
+    min-height:760px;
+  }
+
+  .hero-logo{
+    width:min(390px,85vw);
+  }
+
+  .intro,
+  .farm,
+  .apartments,
+  .gallery-section,
+  .arrival,
+  .contact{
+    padding:90px 22px;
+  }
+
+  .farm-images>img{
+    height:320px;
+  }
+
+  .farm-small{
+    grid-template-columns:1fr;
+  }
+
+  .farm-small img{
+    height:220px;
+  }
+
+  .highlights{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .apartment{
+    gap:42px;
+  }
+
+  .apartment-image img{
+    height:360px;
+  }
+
+  .features{
+    grid-template-columns:1fr;
+  }
+
+  .apartment-gallery{
+    grid-template-columns:repeat(2,1fr);
+    margin-bottom:95px;
+  }
+
+  .apartment-gallery img{
+    height:140px;
+  }
+
+  .gallery-grid{
+    grid-template-columns:1fr;
+    grid-auto-rows:230px;
+  }
+
+  .gallery-grid img:nth-child(1),
+  .gallery-grid img:nth-child(6){
+    grid-column:auto;
+    grid-row:auto;
+  }
+
+  .contact-form button{
+    width:100%;
+  }
+
+  .cookie-banner{
+    bottom:10px;
+    grid-template-columns:1fr;
+    gap:18px;
+    padding:20px;
+  }
+
+  .cookie-actions{
+    display:grid;
+    grid-template-columns:1fr;
+  }
+
+  .cookie-actions button{
+    width:100%;
+  }
+
+  .lightbox{
+    padding:18px;
+  }
+}/* =========================================================
+   RECHTLICHE SEITEN
+========================================================= */
+
+.legal-page{
+  background:var(--cream);
+  color:var(--text);
+}
+
+.legal-page-content{
+  width:min(900px,calc(100% - 40px));
+  margin:50px auto;
+  padding:60px;
+  background:#fff;
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+}
+
+.legal-page-content h1{
+  margin-bottom:35px;
+  font-family:"Cormorant Garamond",serif;
+  font-size:56px;
+  font-weight:500;
+  color:var(--green-dark);
+}
+
+.legal-page-content h2{
+  margin:32px 0 10px;
+  font-size:20px;
+  color:var(--green-dark);
+}
+
+.legal-page-content p{
+  margin-bottom:15px;
+}
+
+.legal-page-content ul{
+  margin:0 0 20px 25px;
+}
+
+.legal-page-content a{
+  color:var(--green-dark);
+  text-decoration:underline;
+}
+
+.legal-back{
+  display:inline-block;
+  margin-bottom:32px;
+}
+
+.legal-date{
+  margin-top:40px;
+  padding-top:20px;
+  border-top:1px solid var(--line);
+  font-size:13px;
+  color:var(--muted);
+}
+
+@media(max-width:700px){
+  .legal-page-content{
+    margin:15px auto;
+    padding:35px 22px;
+  }
+
+  .legal-page-content h1{
+    font-size:43px;
+  }
+
+}/* =========================================================
+   EINBLENDANIMATIONEN
+========================================================= */
+
+.reveal{
+  opacity:0;
+  transform:translateY(35px);
+  transition:
+    opacity .8s ease,
+    transform .8s ease;
+}
+
+.reveal.visible{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* etwas langsamere Varianten */
+
+.reveal-delay-1{
+  transition-delay:.1s;
+}
+
+.reveal-delay-2{
+  transition-delay:.2s;
+}
+
+.reveal-delay-3{
+  transition-delay:.3s;
+}
+
+/* Für Besucher mit reduzierten Animationen */
+
+@media (prefers-reduced-motion: reduce){
+
+  .reveal,
+  .reveal.visible{
+    opacity:1;
+    transform:none;
+    transition:none;
+  }
+
+}.btn,
+.button,
+.cta-button{
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        background .35s ease;
+
+}
+
+.btn:hover,
+.button:hover,
+.cta-button:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 18px 40px rgba(0,0,0,.18);
+
+}.gallery-grid img,
+.apartment img{
+
+    transition:
+        transform .5s ease,
+        box-shadow .5s ease;
+
+}
+
+.gallery-grid img:hover,
+.apartment img:hover{
+
+    transform:scale(1.04);
+
+    box-shadow:
+    0 25px 45px rgba(0,0,0,.18);
+
+}.hero-logo{
+
+    animation:
+
+    floatLogo 7s ease-in-out infinite;
+
+}
+
+@keyframes floatLogo{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+}/* =========================================================
+   MOBILE FEINSCHLIFF – WIESENHEIM HOF
+========================================================= */
+
+@media (max-width:700px){
+
+  html{
+    scroll-padding-top:85px;
+  }
+
+  body{
+    font-size:16px;
+    line-height:1.65;
+  }
+
+  /* Navigation */
+
+  .site-header{
+    padding:8px 0;
+  }
+
+  .navbar{
+    width:calc(100% - 20px);
+    min-height:58px;
+    padding:8px 12px;
+    border-radius:20px;
+  }
+
+  .menu-toggle{
+    display:flex;
+    flex-shrink:0;
+  }
+
+  .menu{
+    position:absolute;
+    top:70px;
+    left:10px;
+    right:10px;
+    display:none;
+    flex-direction:column;
+    align-items:stretch;
+    gap:0;
+    padding:12px;
+    background:rgba(255,255,255,.97);
+    border-radius:18px;
+    box-shadow:0 18px 50px rgba(0,0,0,.16);
+  }
+
+  .menu.open{
+    display:flex;
+  }
+
+  .menu a{
+    width:100%;
+    padding:13px 12px;
+    border-bottom:1px solid rgba(0,0,0,.06);
+    font-size:13px;
+  }
+
+  .menu a:last-child{
+    border-bottom:0;
+  }
+
+ .nav-right{
+    display:flex;
+    align-items:center;
+    gap:4px;
+}
+.nav-divider{
+    margin:0;
+    padding:0;
+}
+
+  .weather{
+    display:none;
+  }
+
+  .languages{
+    gap:2px;
+  }
+
+  .languages button{
+    padding:6px;
+    font-size:11px;
+  }
+
+  /* Hero */
+
+  .hero{
+    min-height:100svh;
+  }
+
+  .hero-content{
+    width:100%;
+    padding:110px 20px 75px;
+  }
+
+  .hero-logo{
+    width:min(330px,82vw);
+    margin-bottom:20px;
+  }
+
+  .hero h1{
+    font-size:clamp(48px,15vw,68px);
+    line-height:.95;
+    margin-bottom:14px;
+  }
+
+  .hero p{
+    max-width:310px;
+    margin:0 auto 30px;
+    font-size:17px;
+    line-height:1.45;
+  }
+
+  .hero .button{
+    width:min(260px,88%);
+  }
+
+  .scroll-note{
+    bottom:18px;
+    font-size:9px;
+    letter-spacing:2px;
+  }
+
+  #heroVideo{
+    filter:
+      blur(2px)
+      brightness(.68)
+      saturate(1.03);
+
+    transform:scale(1.09);
+  }
+
+  /* Allgemeine Abschnitte */
+
+  .intro,
+  .farm,
+  .apartments,
+  .gallery-section,
+  .arrival,
+  .contact{
+    padding:78px 20px;
+  }
+
+  .section-title{
+    margin-bottom:48px;
+  }
+
+  .section-title span{
+    font-size:10px;
+    letter-spacing:2.2px;
+  }
+
+  .section-title h2{
+    font-size:42px;
+    line-height:1.05;
+  }
+
+  .intro h2{
+    font-size:46px;
+    margin-bottom:24px;
+  }
+
+  .intro p{
+    font-size:17px;
+    text-align:left;
+  }
+
+  /* Hof */
+
+  .farm-grid{
+    gap:38px;
+  }
+
+  .farm-text p{
+    font-size:16px;
+  }
+
+  .farm-images>img{
+    height:300px;
+  }
+
+  .farm-small{
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+  }
+
+  .farm-small img{
+    height:145px;
+  }
+
+  .highlights{
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+    margin-top:45px;
+  }
+
+  .highlight{
+    min-height:78px;
+    display:grid;
+    place-items:center;
+    padding:14px 10px;
+    font-size:13px;
+  }
+
+  /* Ferienwohnungen */
+
+  .apartments{
+    padding-bottom:45px;
+  }
+
+  .apartment{
+    gap:32px;
+    margin-bottom:35px;
+  }
+
+  .apartment + .apartment{
+    margin-top:90px;
+  }
+
+  .apartment-image img{
+    height:330px;
+    border-radius:16px;
+  }
+
+  .apartment-content h3{
+    font-size:48px;
+  }
+
+  .apartment-info{
+    font-size:14px;
+    line-height:1.5;
+  }
+
+  .apartment-copy{
+    font-size:16px;
+  }
+
+  .features{
+    grid-template-columns:1fr;
+    margin-bottom:28px;
+  }
+
+  .features div{
+    padding:10px 0;
+    font-size:14px;
+  }
+
+  .apartment-content .button{
+    width:100%;
+  }
+
+  .apartment-gallery{
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+    margin-bottom:75px;
+  }
+
+  .apartment-gallery img{
+    height:135px;
+    border-radius:12px;
+  }
+
+  /* Galerie */
+
+  .gallery-section{
+    padding-top:55px;
+  }
+
+  .gallery-grid{
+    grid-template-columns:1fr 1fr;
+    grid-auto-rows:150px;
+    gap:10px;
+  }
+
+  .gallery-grid img,
+  .gallery-grid img:nth-child(1),
+  .gallery-grid img:nth-child(6){
+    grid-column:auto;
+    grid-row:auto;
+    height:150px;
+    border-radius:13px;
+  }
+
+  .gallery-grid img:first-child{
+    grid-column:1 / -1;
+    height:220px;
+  }
+
+  /* Anfahrt */
+
+  .arrival-grid{
+    gap:35px;
+  }
+
+  .arrival-text h3{
+    font-size:38px;
+    line-height:1.1;
+  }
+
+  .arrival-text p{
+    font-size:15px;
+  }
+
+  .route-card{
+    padding:20px;
+    border-radius:17px;
+  }
+
+  .route-line{
+    grid-template-columns:40px 1fr;
+    gap:12px;
+  }
+
+  .route-dot{
+    width:34px;
+    height:34px;
+    font-size:13px;
+  }
+
+  /* Kontakt */
+
+  .contact-grid{
+    gap:45px;
+  }
+
+  .contact-data h3{
+    font-size:42px;
+  }
+
+  .contact-data p{
+    font-size:15px;
+  }
+
+  .contact-form input,
+  .contact-form textarea{
+    font-size:16px;
+  }
+
+  .contact-form button{
+    width:100%;
+  }
+
+  /* Footer */
+
+  .site-footer{
+    padding:48px 20px;
+  }
+
+  .site-footer h3{
+    font-size:36px;
+  }
+
+  .site-footer p{
+    font-size:13px;
+  }
+
+  .legal-links{
+    margin-top:24px;
+    gap:6px;
+    font-size:10px;
+  }
+
+  /* Cookie-Banner */
+
+  .cookie-banner{
+    width:calc(100% - 20px);
+    bottom:10px;
+    padding:18px;
+    grid-template-columns:1fr;
+    gap:16px;
+    border-radius:16px;
+  }
+
+  .cookie-text p{
+    font-size:12px;
+  }
+
+  .cookie-actions{
+    display:grid;
+    grid-template-columns:1fr;
+  }
+
+  .cookie-actions button{
+    width:100%;
+  }
+
+  /* Lightbox */
+
+  .lightbox{
+    padding:14px;
+  }
+
+  .lightbox img{
+    max-width:96vw;
+    max-height:82vh;
+  }
+
+  .lightbox-close{
+    top:10px;
+    right:14px;
+  }
+}@media (max-width:420px){
+
+  .hero h1{
+    font-size:50px;
+  }
+
+  .farm-small{
+    grid-template-columns:1fr;
+  }
+
+  .farm-small img{
+    height:190px;
+  }
+
+  .highlights{
+    grid-template-columns:1fr;
+  }
+
+  .gallery-grid{
+    grid-template-columns:1fr;
+  }
+
+  .gallery-grid img,
+  .gallery-grid img:first-child{
+    grid-column:auto;
+    width:100%;
+    height:220px;
+  }
+
+  .apartment-gallery{
+    grid-template-columns:1fr;
+  }
+
+  .apartment-gallery img{
+    height:210px;
+  }
+}.nav-right{
+    display:flex;
+    align-items:center;
+    gap:4px;      /* vorher wahrscheinlich 10px oder mehr */
+}
+
+.weather{
+    display:flex;
+    align-items:center;
+    gap:2px;      /* Abstand zwischen Symbol und Temperatur */
+    margin-right:2px; /* vorher 10px */
+    font-size:12px;
+    font-weight:600;
+}
+
+.nav-divider{
+    margin:0 2px; /* Abstand links und rechts vom | */
+    color:rgba(0,0,0,.25);
+}
+
+.languages{
+    display:flex;
+    align-items:center;
+    gap:2px;
+}
+
+.languages button{
+    background:none;
+    border:none;
+    cursor:pointer;
+    padding:2px 4px;
+    font-size:12px;
+    font-weight:600;
+    color:inherit;
+    transition:.25s;
+}
+
+.languages button:hover{
+    color:var(--green-dark);
+}
