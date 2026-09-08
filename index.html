@@ -459,9 +459,13 @@
       </div>
 
       <form class="contact-form"
-            action="mailto:wiesenheimhof@gmail.com"
-            method="post"
-            enctype="text/plain">
+            action="https://formsubmit.co/wiesenheimhof@gmail.com"
+            method="POST">
+
+        <input type="hidden" name="_subject" value="Neue Anfrage über wiesenheim-hof.it">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://www.wiesenheim-hof.it/#kontakt">
+        <input type="text" name="_honey" style="display:none">
 
         <label>
           <span data-i18n="form_name">Name</span>
