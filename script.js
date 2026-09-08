@@ -44,27 +44,31 @@ const translations = {
     apartments_kicker: "Ferienwohnungen",
     apartments_title: "Ihr Zuhause auf Zeit",
 
-    sole_info: "Bis zu 4 Personen · 1 Schlafzimmer · 4 Betten",
+    montis_title: 'Wohnung "Montis"',
+    terra_title: 'Wohnung "Terra"',
 
-    sole_text:
-      "Unsere Ferienwohnung Sole bietet Platz für bis zu vier Personen und eignet sich ideal für Familien oder Freunde, die ihren Urlaub in ruhiger und naturnaher Umgebung verbringen möchten.",
+    montis_info: "Bis zu 4 Personen · 1 Schlafzimmer · 4 Betten",
 
-    sole_f1: "Bis zu 4 Personen",
-    sole_f2: "1 Schlafzimmer",
-    sole_f3: "4 Betten",
+    montis_text:
+      "Unsere Ferienwohnung Montis bietet Platz für bis zu vier Personen und eignet sich ideal für Familien oder Freunde, die ihren Urlaub in ruhiger und naturnaher Umgebung verbringen möchten.",
 
-    luna_info: "Bis zu 3 Personen · 1 Schlafzimmer · 3 Betten",
+    montis_f1: "Bis zu 4 Personen",
+    montis_f2: "1 Schlafzimmer",
+    montis_f3: "4 Betten",
 
-    luna_text:
-      "Die Ferienwohnung Luna bietet Platz für bis zu drei Personen und ist ideal für Paare oder kleine Familien. Sie verfügt über eine voll ausgestattete Küche, einen gemütlichen Wohnbereich sowie einen Balkon mit Blick ins Grüne.",
+    terra_info: "Bis zu 2 Personen · 1 Schlafzimmer · 2 Betten",
 
-    luna_f1: "Bis zu 3 Personen",
-    luna_f2: "1 Schlafzimmer",
-    luna_f3: "3 Betten",
+    terra_text:
+      "Die Ferienwohnung Terra bietet Platz für bis zu zwei Personen und ist ideal für Paare. Sie verfügt über eine voll ausgestattete Küche, einen gemütlichen Wohnbereich sowie eine Terrasse mit Blick ins Grüne.",
+
+    terra_f1: "Bis zu 2 Personen",
+    terra_f2: "1 Schlafzimmer",
+    terra_f3: "2 Betten",
 
     common_f4: "Voll ausgestattete Küche",
     common_f5: "Gemütlicher Wohnbereich",
-    common_f6: "Balkon",
+    montis_f6: "Balkon",
+    terra_f6: "Terrasse",
     common_f7: "Kostenloses WLAN",
     common_f8: "Parkplatz",
     common_f9: "Bettwäsche und Handtücher",
@@ -87,11 +91,16 @@ const translations = {
     route_2_title: "Sonnenbergstraße",
     route_2_text: "Der Straße bergwärts folgen",
 
+    address_street: "Terner Tal 6",
+    address_city: "39030 Terenten (BZ)",
+    address_region_country: "Südtirol · Italien",
+    footer_address: "Terner Tal 6 · 39030 Terenten · Südtirol",
+
     contact_kicker: "Kontakt",
     contact_title: "Wir freuen uns auf Ihre Anfrage",
 
     phone: "Telefon:",
-    to_follow: "wird ergänzt",
+    to_follow: "+39 342 554 1860",
     tax_number: "Steuernummer:",
     vat_number: "MwSt.-Nr.:",
 
@@ -161,27 +170,31 @@ const translations = {
     apartments_kicker: "Appartamenti",
     apartments_title: "La vostra casa in vacanza",
 
-    sole_info: "Fino a 4 persone · 1 camera · 4 letti",
+    montis_title: 'Appartamento "Montis"',
+    terra_title: 'Appartamento "Terra"',
 
-    sole_text:
-      "L'appartamento Sole ospita fino a quattro persone ed è ideale per famiglie o amici che desiderano trascorrere una vacanza tranquilla a contatto con la natura.",
+    montis_info: "Fino a 4 persone · 1 camera · 4 letti",
 
-    sole_f1: "Fino a 4 persone",
-    sole_f2: "1 camera",
-    sole_f3: "4 letti",
+    montis_text:
+      "L'appartamento Montis ospita fino a quattro persone ed è ideale per famiglie o amici che desiderano trascorrere una vacanza tranquilla a contatto con la natura.",
 
-    luna_info: "Fino a 3 persone · 1 camera · 3 letti",
+    montis_f1: "Fino a 4 persone",
+    montis_f2: "1 camera",
+    montis_f3: "4 letti",
 
-    luna_text:
-      "L'appartamento Luna ospita fino a tre persone ed è ideale per coppie o piccole famiglie. Dispone di cucina attrezzata, zona giorno accogliente e balcone con vista sul verde.",
+    terra_info: "Fino a 2 persone · 1 camera · 2 letti",
 
-    luna_f1: "Fino a 3 persone",
-    luna_f2: "1 camera",
-    luna_f3: "3 letti",
+    terra_text:
+      "L'appartamento Terra ospita fino a due persone ed è ideale per coppie. Dispone di cucina attrezzata, zona giorno accogliente e una terrazza con vista sul verde.",
+
+    terra_f1: "Fino a 2 persone",
+    terra_f2: "1 camera",
+    terra_f3: "2 letti",
 
     common_f4: "Cucina attrezzata",
     common_f5: "Zona giorno accogliente",
-    common_f6: "Balcone",
+    montis_f6: "Balcone",
+    terra_f6: "Terrazza",
     common_f7: "Wi-Fi gratuito",
     common_f8: "Parcheggio",
     common_f9: "Biancheria e asciugamani",
@@ -204,11 +217,16 @@ const translations = {
     route_2_title: "Sonnenbergstraße",
     route_2_text: "Proseguire in salita",
 
+    address_street: "Via Val di Terento 6",
+    address_city: "39030 Terento (BZ)",
+    address_region_country: "Alto Adige · Italia",
+    footer_address: "Via Val di Terento 6 · 39030 Terento · Alto Adige",
+
     contact_kicker: "Contatti",
     contact_title: "Saremo lieti di ricevere la vostra richiesta",
 
     phone: "Telefono:",
-    to_follow: "da aggiungere",
+    to_follow: "+39 342 554 1860",
     tax_number: "Codice fiscale:",
     vat_number: "Partita IVA:",
 
@@ -278,27 +296,31 @@ const translations = {
     apartments_kicker: "Apartments",
     apartments_title: "Your holiday home",
 
-    sole_info: "Up to 4 guests · 1 bedroom · 4 beds",
+    montis_title: 'Apartment "Montis"',
+    terra_title: 'Apartment "Terra"',
 
-    sole_text:
-      "Apartment Sole accommodates up to four guests and is ideal for families or friends who would like to spend a peaceful holiday close to nature.",
+    montis_info: "Up to 4 guests · 1 bedroom · 4 beds",
 
-    sole_f1: "Up to 4 guests",
-    sole_f2: "1 bedroom",
-    sole_f3: "4 beds",
+    montis_text:
+      "Apartment Montis accommodates up to four guests and is ideal for families or friends who would like to spend a peaceful holiday close to nature.",
 
-    luna_info: "Up to 3 guests · 1 bedroom · 3 beds",
+    montis_f1: "Up to 4 guests",
+    montis_f2: "1 bedroom",
+    montis_f3: "4 beds",
 
-    luna_text:
-      "Apartment Luna accommodates up to three guests and is ideal for couples or small families. It has a fully equipped kitchen, a cosy living area and a balcony overlooking the greenery.",
+    terra_info: "Up to 2 guests · 1 bedroom · 2 beds",
 
-    luna_f1: "Up to 3 guests",
-    luna_f2: "1 bedroom",
-    luna_f3: "3 beds",
+    terra_text:
+      "Apartment Terra accommodates up to two guests and is ideal for couples. It has a fully equipped kitchen, a cosy living area and a terrace overlooking the greenery.",
+
+    terra_f1: "Up to 2 guests",
+    terra_f2: "1 bedroom",
+    terra_f3: "2 beds",
 
     common_f4: "Fully equipped kitchen",
     common_f5: "Cosy living area",
-    common_f6: "Balcony",
+    montis_f6: "Balcony",
+    terra_f6: "Terrace",
     common_f7: "Free Wi-Fi",
     common_f8: "Parking",
     common_f9: "Bed linen and towels",
@@ -321,11 +343,16 @@ const translations = {
     route_2_title: "Sonnenbergstraße",
     route_2_text: "Continue uphill",
 
+    address_street: "Terner Tal 6",
+    address_city: "39030 Terenten (BZ)",
+    address_region_country: "South Tyrol · Italy",
+    footer_address: "Terner Tal 6 · 39030 Terenten · South Tyrol",
+
     contact_kicker: "Contact",
     contact_title: "We look forward to your enquiry",
 
     phone: "Phone:",
-    to_follow: "to be added",
+    to_follow: "+39 342 554 1860",
     tax_number: "Tax number:",
     vat_number: "VAT number:",
 
@@ -449,57 +476,6 @@ if (heroVideo && heroImage) {
       heroImage.style.display = "block";
     });
   }
-}
-
-
-/* =========================================================
-   BILDERGALERIE / LIGHTBOX
-========================================================= */
-
-const lightbox = document.getElementById("lightbox");
-
-if (lightbox) {
-  const lightboxImage = lightbox.querySelector("img");
-  const lightboxClose = lightbox.querySelector(".lightbox-close");
-
-  document.querySelectorAll(".lightbox-item").forEach((image) => {
-    image.addEventListener("click", () => {
-      lightboxImage.src = image.src;
-      lightboxImage.alt = image.alt || "";
-
-      lightbox.classList.add("open");
-      lightbox.setAttribute("aria-hidden", "false");
-
-      document.body.style.overflow = "hidden";
-    });
-  });
-
-  function closeLightbox() {
-    lightbox.classList.remove("open");
-    lightbox.setAttribute("aria-hidden", "true");
-
-    lightboxImage.src = "";
-    document.body.style.overflow = "";
-  }
-
-  if (lightboxClose) {
-    lightboxClose.addEventListener("click", closeLightbox);
-  }
-
-  lightbox.addEventListener("click", (event) => {
-    if (event.target === lightbox) {
-      closeLightbox();
-    }
-  });
-
-  document.addEventListener("keydown", (event) => {
-    if (
-      event.key === "Escape" &&
-      lightbox.classList.contains("open")
-    ) {
-      closeLightbox();
-    }
-  });
 }
 
 
@@ -704,4 +680,211 @@ window.addEventListener("scroll",()=>{
 
     }
 
+});/* =========================================================
+   WIESENHEIM HOF – LIGHTBOX MIT VOR / ZURÜCK
+   Diesen Block zusätzlich am Ende von script.js einfügen.
+========================================================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+  const lightbox = document.getElementById("lightbox");
+  if (!lightbox) return;
+
+  const lightboxImage = lightbox.querySelector("img");
+  const lightboxClose = lightbox.querySelector(".lightbox-close");
+
+  if (!lightboxImage) return;
+
+  /* Pfeil-Buttons automatisch erzeugen */
+  let lightboxPrev = lightbox.querySelector(".lightbox-prev");
+  let lightboxNext = lightbox.querySelector(".lightbox-next");
+
+  if (!lightboxPrev) {
+    lightboxPrev = document.createElement("button");
+    lightboxPrev.className = "lightbox-prev";
+    lightboxPrev.type = "button";
+    lightboxPrev.setAttribute("aria-label", "Vorheriges Bild");
+    lightboxPrev.innerHTML = "&#10094;";
+    lightbox.appendChild(lightboxPrev);
+  }
+
+  if (!lightboxNext) {
+    lightboxNext = document.createElement("button");
+    lightboxNext.className = "lightbox-next";
+    lightboxNext.type = "button";
+    lightboxNext.setAttribute("aria-label", "Nächstes Bild");
+    lightboxNext.innerHTML = "&#10095;";
+    lightbox.appendChild(lightboxNext);
+  }
+
+  let currentIndex = 0;
+  let currentGroup = [];
+
+  /*
+    Bilder werden nach Abschnitt gruppiert.
+    Dadurch kann man innerhalb der Ferienwohnungen
+    durch die Wohnungsbilder blättern.
+    Die allgemeine Galerie bleibt eine eigene Gruppe.
+  */
+  function getGroupForImage(image) {
+  const src = image.getAttribute("src") || "";
+
+  let images = [];
+
+  // MONTIS
+  if (src.includes("/montis/")) {
+    images = Array.from(
+      document.querySelectorAll(
+        '.lightbox-item[src*="/montis/"]'
+      )
+    );
+  }
+
+  // TERRA
+  else if (src.includes("/terra/")) {
+    images = Array.from(
+      document.querySelectorAll(
+        '.lightbox-item[src*="/terra/"]'
+      )
+    );
+  }
+
+  // ALLGEMEINE GALERIE
+  else if (src.includes("/galerie/")) {
+    images = Array.from(
+      document.querySelectorAll(
+        '.lightbox-item[src*="/galerie/"]'
+      )
+    );
+  }
+
+  else {
+    return [image];
+  }
+
+  // Doppelte Bilder entfernen
+  const uniqueImages = [];
+
+  images.forEach((img) => {
+    const imgSrc = img.getAttribute("src");
+
+    const alreadyExists = uniqueImages.some(
+      (existingImg) =>
+        existingImg.getAttribute("src") === imgSrc
+    );
+
+    if (!alreadyExists) {
+      uniqueImages.push(img);
+    }
+  });
+
+  return uniqueImages;
+}
+  function updateLightbox() {
+    if (!currentGroup.length) return;
+
+    const currentImage = currentGroup[currentIndex];
+
+    lightboxImage.src = currentImage.currentSrc || currentImage.src;
+    lightboxImage.alt = currentImage.alt || "";
+
+    const showNavigation = currentGroup.length > 1;
+
+    lightboxPrev.style.display = showNavigation ? "flex" : "none";
+    lightboxNext.style.display = showNavigation ? "flex" : "none";
+  }
+
+  function openLightbox(image) {
+    currentGroup = getGroupForImage(image);
+
+    currentIndex = currentGroup.indexOf(image);
+
+    if (currentIndex < 0) {
+      currentIndex = 0;
+    }
+
+    updateLightbox();
+
+    lightbox.classList.add("open");
+    lightbox.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove("open");
+    lightbox.setAttribute("aria-hidden", "true");
+    lightboxImage.src = "";
+    document.body.style.overflow = "";
+    currentGroup = [];
+    currentIndex = 0;
+  }
+
+  function showPrevious() {
+    if (currentGroup.length < 2) return;
+
+    currentIndex =
+      (currentIndex - 1 + currentGroup.length) %
+      currentGroup.length;
+
+    updateLightbox();
+  }
+
+  function showNext() {
+    if (currentGroup.length < 2) return;
+
+    currentIndex =
+      (currentIndex + 1) %
+      currentGroup.length;
+
+    updateLightbox();
+  }
+
+  /*
+    Wichtig:
+    Die vorhandene Lightbox bleibt bestehen.
+    Dieser zusätzliche Klick-Handler ergänzt nur die Navigation.
+  */
+  document.querySelectorAll(".lightbox-item").forEach((image) => {
+    image.addEventListener("click", () => {
+      openLightbox(image);
+    });
+  });
+
+  lightboxPrev.addEventListener("click", (event) => {
+    event.stopPropagation();
+    showPrevious();
+  });
+
+  lightboxNext.addEventListener("click", (event) => {
+    event.stopPropagation();
+    showNext();
+  });
+
+  if (lightboxClose) {
+    lightboxClose.addEventListener("click", (event) => {
+      event.stopPropagation();
+      closeLightbox();
+    });
+  }
+
+  lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) {
+      closeLightbox();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (!lightbox.classList.contains("open")) return;
+
+    if (event.key === "Escape") {
+      closeLightbox();
+    }
+
+    if (event.key === "ArrowLeft") {
+      showPrevious();
+    }
+
+    if (event.key === "ArrowRight") {
+      showNext();
+    }
+  });
 });
