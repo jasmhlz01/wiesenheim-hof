@@ -1830,15 +1830,25 @@ button{
   }
 }
 @media (max-width:700px){
-  .lightbox{
-    padding:20px 0 !important;
+  .lightbox.open{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    padding:0 !important;
   }
 
   .lightbox img{
-    display:block;
+    position:relative !important;
+    display:block !important;
     width:auto !important;
-    max-width:90vw !important;
     height:auto !important;
-    margin:0 auto !important;
+    max-width:88vw !important;
+    max-height:80vh !important;
+    margin:0 !important;
+    transform:none !important;
   }
+  .apartment-content h3{
+  font-size:40px !important;
+  white-space:nowrap;
+}
 }
