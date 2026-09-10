@@ -458,24 +458,19 @@ const heroVideo = document.getElementById("heroVideo");
 const heroImage = document.getElementById("heroImage");
 
 if (heroVideo && heroImage) {
-  heroVideo.addEventListener("canplay", () => {
-    heroVideo.style.display = "block";
-    heroImage.style.display = "none";
+
+  heroVideo.style.display = "block";
+  heroImage.style.display = "none";
+
+  heroVideo.play().catch(() => {
+    heroVideo.style.display = "none";
+    heroImage.style.display = "block";
   });
 
   heroVideo.addEventListener("error", () => {
     heroVideo.style.display = "none";
     heroImage.style.display = "block";
   });
-
-  const videoSource = heroVideo.querySelector("source");
-
-  if (videoSource) {
-    videoSource.addEventListener("error", () => {
-      heroVideo.style.display = "none";
-      heroImage.style.display = "block";
-    });
-  }
 }
 
 
